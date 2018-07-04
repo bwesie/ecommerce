@@ -1,0 +1,9 @@
+<h1>Welcome!</h1><br>
+
+<% if current_user.nil? %>
+	<h5>Hello welcomed guest. Feel free to make an account for future purchases.</h5>
+<% else %>
+	<h5>Take a look, <strong><%= current_user.name %></strong></h5>
+<% end %>
+
+<%= render 'productloop' %>
